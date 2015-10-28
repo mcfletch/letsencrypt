@@ -40,6 +40,7 @@ def get_options():
         '-f','--force',
         action='store_true',
         default=False,
+        help_text = 'If set, force setup.py operations for our packages (pick up new entry points and the like)',
     )
     return parser
 
