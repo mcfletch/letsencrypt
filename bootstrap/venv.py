@@ -28,7 +28,7 @@ def command( command, *args, **named):
     return stdout
 
 def get_options():
-    parser = argparse.ArgumentParser(description="Create developer's virtualenv for letsencrypt")
+    parser = argparse.ArgumentParser(description="Create developer's virtualenv for letsencrypt\n    source $(bootstrap/%(prog)s)")
     default = default_virtualenv()
     parser.add_argument(
         '-e','--env', 
@@ -40,7 +40,7 @@ def get_options():
         '-f','--force',
         action='store_true',
         default=False,
-        help_text = 'If set, force setup.py operations for our packages (pick up new entry points and the like)',
+        help = 'If set, force setup.py operations for our packages (pick up new entry points and the like)',
     )
     return parser
 
